@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxiuwpqho5gb5"]
+
+[ext_resource type="PackedScene" uid="uid://dgt47bra3qrdb" path="res://Scenes/Player/player.tscn" id="1_gpvh2"]
+[ext_resource type="Script" path="res://Scenes/Levels/level.gd" id="1_yhfjs"]
+[ext_resource type="Texture2D" uid="uid://u62isbeusx24" path="res://Graphics/stones.png" id="2_0hef2"]
+[ext_resource type="PackedScene" uid="uid://b72kxarvfd8jy" path="res://Scenes/spawn_manager.tscn" id="4_1gmju"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_yhfjs")
+
+[node name="Ground" type="Node2D" parent="."]
+
+[node name="Stones" type="Sprite2D" parent="Ground"]
+texture_repeat = 2
+position = Vector2(3, -7)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_0hef2")
+region_enabled = true
+region_rect = Rect2(20000, 20000, 20000, 20000)
+
+[node name="Player" parent="." instance=ExtResource("1_gpvh2")]
+
+[node name="SpawnManager" parent="Player" instance=ExtResource("4_1gmju")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+scale = Vector2(2, 2)
+position_smoothing_enabled = true
+
+[node name="Enemies" type="Node2D" parent="."]

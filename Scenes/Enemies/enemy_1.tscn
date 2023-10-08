@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://beekovgreepni"]
+
+[ext_resource type="Script" path="res://Scenes/Enemies/enemy_1.gd" id="1_bktys"]
+[ext_resource type="Texture2D" uid="uid://b1svfgejd5s75" path="res://Graphics/Goblin.png" id="1_suh0v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bmlo"]
+radius = 19.0263
+
+[node name="Enemy_1" type="CharacterBody2D"]
+script = ExtResource("1_bktys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_1bmlo")
+
+[node name="Goblin" type="Sprite2D" parent="."]
+texture = ExtResource("1_suh0v")
