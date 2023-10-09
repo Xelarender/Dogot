@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bovntnsln2la5"]
+
+[ext_resource type="Script" path="res://Scenes/Player/scratch.gd" id="1_cjc48"]
+[ext_resource type="Texture2D" uid="uid://bmgsuydauutrb" path="res://Graphics/scratch.png" id="2_tmfu0"]
+
+[node name="Scratch" type="Area2D"]
+script = ExtResource("1_cjc48")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-263, -73, -251, -126, -233, -176, -190, -229, -120, -260, 6, -265, 93, -262, 172, -241, 237, -185, 262, -109, 276, 58, -284, 58)
+
+[node name="Scratch" type="Sprite2D" parent="."]
+position = Vector2(-20, -67)
+rotation = -0.555413
+scale = Vector2(1.004, 1.232)
+texture = ExtResource("2_tmfu0")
+
+[node name="Scratch2" type="Sprite2D" parent="."]
+position = Vector2(41, -97)
+rotation = 4.44954
+scale = Vector2(1.004, 1.232)
+texture = ExtResource("2_tmfu0")

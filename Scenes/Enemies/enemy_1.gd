@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var direction = Vector2.UP
-var speed = 50
+@export var speed = 50
 
 
 

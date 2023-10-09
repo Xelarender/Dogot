@@ -27,3 +27,5 @@ scale = Vector2(2, 2)
 position_smoothing_enabled = true
 
 [node name="Enemies" type="Node2D" parent="."]
+
+[node name="Projectiles" type="Node2D" parent="."]
