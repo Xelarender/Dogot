@@ -22,3 +22,7 @@ func _process(_delta):
 	velocity = direction * speed
 	move_and_slide()
 	pass
+
+
+func _hit():
+	queue_free()

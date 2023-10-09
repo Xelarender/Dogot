@@ -4,19 +4,28 @@
 [ext_resource type="Texture2D" uid="uid://bmgsuydauutrb" path="res://Graphics/scratch.png" id="2_tmfu0"]
 
 [node name="Scratch" type="Area2D"]
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_cjc48")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -175)
 polygon = PackedVector2Array(-263, -73, -251, -126, -233, -176, -190, -229, -120, -260, 6, -265, 93, -262, 172, -241, 237, -185, 262, -109, 276, 58, -284, 58)
 
 [node name="Scratch" type="Sprite2D" parent="."]
-position = Vector2(-20, -67)
-rotation = -0.555413
+position = Vector2(-64, -250)
+rotation = -0.718026
 scale = Vector2(1.004, 1.232)
 texture = ExtResource("2_tmfu0")
 
 [node name="Scratch2" type="Sprite2D" parent="."]
-position = Vector2(41, -97)
-rotation = 4.44954
+position = Vector2(112, -250)
+rotation = 4.75709
 scale = Vector2(1.004, 1.232)
 texture = ExtResource("2_tmfu0")
+
+[node name="SelfDestruct" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="SelfDestruct" to="." method="_on_self_destruct_timeout"]
