@@ -8,6 +8,7 @@ radius = 19.0263
 
 [node name="Enemy_1" type="CharacterBody2D"]
 script = ExtResource("1_bktys")
+speed = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

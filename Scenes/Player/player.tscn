@@ -15,3 +15,7 @@ shape = SubResource("RectangleShape2D_s3hry")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_7ovpt")
+
+[node name="ScratchTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="ScratchTimer" to="." method="_on_scratch_timer_timeout"]
