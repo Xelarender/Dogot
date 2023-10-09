@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+@onready var anim = get_node("AnimationPlayer")
+
+
 @export var speed:int = 100
 @export var max_speed:int = 500
 var direction
@@ -16,6 +19,8 @@ func _ready():
 
 func _process(_delta):
 	
+	# might have to create 'idle' function/routine?
+	
 	_movement()
 
 	_scratch()
@@ -29,8 +34,15 @@ func _scratch():
 		var lookdirection = (get_global_mouse_position() - position).normalized()
 		var pos = position
 		$ScratchTimer.start()
+		if lookdirection.x > 0:
+			get_node("AnimatedSprite2D").flip_h = false
+		else:
+			get_node("AnimatedSprite2D").flip_h = true
+		anim.play("scratch")
 		can_scratch = false
 		scratch.emit(pos, lookdirection)
+		await anim.animation_finished
+		anim.play("RESET")
 #		print("Scratched towards" +str(pos, lookdirection))
 	
 
