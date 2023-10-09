@@ -2,8 +2,8 @@ extends Node2D
 
 var enemy: PackedScene = preload("res://Scenes/Enemies/enemy_1.tscn")
 
-#var spawnpoints = $Spawners.get_children()
-#var selected_spawn = spawnpoints[randi() % spawnpoints.size()]
+
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,9 +19,17 @@ func _process(_delta):
 func _on_spawn_timer_timeout():
 	var spawnpoints = $Spawners.get_children()
 	var selected_spawn = spawnpoints[randi() % spawnpoints.size()]
-	print(selected_spawn)
+#	print(selected_spawn)
 	var enemyspawn = enemy.instantiate() as CharacterBody2D
 	enemyspawn.position = selected_spawn.global_position
-	print("enemy spawned at " +str(enemyspawn.position))
+#	print("enemy spawned at " +str(enemyspawn.position))
 	$"../../Enemies".add_child(enemyspawn)
+	pass # Replace with function body.
+
+
+func _on_wave_timer_timeout():
+	var spawntime:float = $SpawnTimer.wait_time
+	$SpawnTimer.set_wait_time(spawntime - 0.1)
+	print("New Wave!")
+	print("Now spawning every "+str($SpawnTimer.wait_time)+" seconds!")
 	pass # Replace with function body.
