@@ -1,11 +1,12 @@
-extends Area2D
+extends object
 
-var value:int
-var direction:Vector2
-var vacuum:bool = false
+#signal exp_pickup(value)
+
 @onready var player = get_tree().current_scene.get_node("Player")
-signal pickup_exp(value)
-
+var speed:int = 500
+var value:int
+var in_magnet_range:bool = false
+var direction
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,25 +15,22 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if in_magnet_range == true:
+		direction = (player.position - position).normalized()
+		position += direction * speed * delta
 
-func _physics_process(delta):
-	direction = (player.position - position).normalized()
-	vacuum = true
-#	print(vacuum)
-#	if vacuum == true:
-#		direction = (player.position - position).normalized()
-#		velocity = direction * speed
-		
 
-func _on_Pickup_range_body_entered(body):
-	print("vacuum")
+func _on_EXP_pickup(body):
+	Signalbus.emit_signal("exp_pickup", value)
+	queue_free()
 	pass # Replace with function body.
 
 
-func _on_body_entered(body):
-	print("plink")
-	print(value)
-	pickup_exp.emit(value)
-	pass # Replace with function body.
+
+
+func _on_magnet_range_entered(body):
+	print("vacuum time")
+	in_magnet_range=true
 	
+	
+	pass # Replace with function body.

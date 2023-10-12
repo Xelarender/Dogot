@@ -1,261 +1,254 @@
-[gd_scene load_steps=2 format=3 uid="uid://b72kxarvfd8jy"]
-
-[ext_resource type="Script" path="res://Scenes/Managers/spawn_manager.gd" id="1_lnefa"]
+[gd_scene format=3 uid="uid://b72kxarvfd8jy"]
 
 [node name="SpawnManager" type="Node2D"]
-script = ExtResource("1_lnefa")
 
 [node name="WaveTimer" type="Timer" parent="."]
 wait_time = 10.0
 
 [node name="SpawnTimer" type="Timer" parent="."]
 
-[node name="Spawners" type="Node2D" parent="."]
+[node name="Spawners - Circle" type="Node2D" parent="."]
 scale = Vector2(2, 2)
 
-[node name="Spawner1" type="Marker2D" parent="Spawners"]
+[node name="Spawner1" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(0, 1210)
 
-[node name="Spawner2" type="Marker2D" parent="Spawners"]
+[node name="Spawner2" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(189.286, 1195)
 
-[node name="Spawner3" type="Marker2D" parent="Spawners"]
+[node name="Spawner3" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(373.911, 1150)
 
-[node name="Spawner4" type="Marker2D" parent="Spawners"]
+[node name="Spawner4" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(549.328, 1078)
 
-[node name="Spawner5" type="Marker2D" parent="Spawners"]
+[node name="Spawner5" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(711.22, 978)
 
-[node name="Spawner6" type="Marker2D" parent="Spawners"]
+[node name="Spawner6" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(855.599, 855)
 
-[node name="Spawner7" type="Marker2D" parent="Spawners"]
+[node name="Spawner7" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(978.91, 711)
 
-[node name="Spawner8" type="Marker2D" parent="Spawners"]
+[node name="Spawner8" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(1078.12, 549)
 
-[node name="Spawner9" type="Marker2D" parent="Spawners"]
+[node name="Spawner9" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(1150.78, 373)
 
-[node name="Spawner10" type="Marker2D" parent="Spawners"]
+[node name="Spawner10" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(1195.1, 189)
 
-[node name="Spawner11" type="Marker2D" parent="Spawners"]
+[node name="Spawner11" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(1210, 0)
 
-[node name="Spawner12" type="Marker2D" parent="Spawners"]
+[node name="Spawner12" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(1195, -189)
 
-[node name="Spawner13" type="Marker2D" parent="Spawners"]
+[node name="Spawner13" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(1150, -373)
 
-[node name="Spawner14" type="Marker2D" parent="Spawners"]
+[node name="Spawner14" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(1078, -549)
 
-[node name="Spawner15" type="Marker2D" parent="Spawners"]
+[node name="Spawner15" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(978, -711)
 
-[node name="Spawner16" type="Marker2D" parent="Spawners"]
+[node name="Spawner16" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(855, -855)
 
-[node name="Spawner17" type="Marker2D" parent="Spawners"]
+[node name="Spawner17" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(711, -978)
 
-[node name="Spawner18" type="Marker2D" parent="Spawners"]
+[node name="Spawner18" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(549, -1078)
 
-[node name="Spawner19" type="Marker2D" parent="Spawners"]
+[node name="Spawner19" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(373, -1150)
 
-[node name="Spawner20" type="Marker2D" parent="Spawners"]
+[node name="Spawner20" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(189, -1195)
 
-[node name="Spawner40" type="Marker2D" parent="Spawners"]
+[node name="Spawner40" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-189.286, 1195)
 
-[node name="Spawner39" type="Marker2D" parent="Spawners"]
+[node name="Spawner39" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-373.911, 1150)
 
-[node name="Spawner38" type="Marker2D" parent="Spawners"]
+[node name="Spawner38" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-549.328, 1078)
 
-[node name="Spawner37" type="Marker2D" parent="Spawners"]
+[node name="Spawner37" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-711.22, 978)
 
-[node name="Spawner36" type="Marker2D" parent="Spawners"]
+[node name="Spawner36" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-855.599, 855)
 
-[node name="Spawner35" type="Marker2D" parent="Spawners"]
+[node name="Spawner35" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-978.91, 711)
 
-[node name="Spawner34" type="Marker2D" parent="Spawners"]
+[node name="Spawner34" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-1078.12, 549)
 
-[node name="Spawner33" type="Marker2D" parent="Spawners"]
+[node name="Spawner33" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-1150.78, 373)
 
-[node name="Spawner32" type="Marker2D" parent="Spawners"]
+[node name="Spawner32" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-1195.1, 189)
 
-[node name="Spawner31" type="Marker2D" parent="Spawners"]
+[node name="Spawner31" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-1210, 0)
 
-[node name="Spawner29" type="Marker2D" parent="Spawners"]
+[node name="Spawner29" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-1150, -373)
 
-[node name="Spawner30" type="Marker2D" parent="Spawners"]
+[node name="Spawner30" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-1195, -189)
 
-[node name="Spawner28" type="Marker2D" parent="Spawners"]
+[node name="Spawner28" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-1078, -549)
 
-[node name="Spawner27" type="Marker2D" parent="Spawners"]
+[node name="Spawner27" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-978, -711)
 
-[node name="Spawner26" type="Marker2D" parent="Spawners"]
+[node name="Spawner26" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-855, -855)
 
-[node name="Spawner25" type="Marker2D" parent="Spawners"]
+[node name="Spawner25" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-711, -978)
 
-[node name="Spawner24" type="Marker2D" parent="Spawners"]
+[node name="Spawner24" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-549, -1078)
 
-[node name="Spawner23" type="Marker2D" parent="Spawners"]
+[node name="Spawner23" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-373, -1150)
 
-[node name="Spawner22" type="Marker2D" parent="Spawners"]
+[node name="Spawner22" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(-189, -1195)
 
-[node name="Spawner21" type="Marker2D" parent="Spawners"]
+[node name="Spawner21" type="Marker2D" parent="Spawners - Circle"]
 position = Vector2(0, -1210)
 
-[node name="SquareSpawners" type="Node2D" parent="."]
-visible = false
+[node name="Spawners - Rectangle" type="Node2D" parent="."]
 scale = Vector2(2, 2)
 
-[node name="Spawner1" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner1" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-1210, -790)
 
-[node name="Spawner2" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner2" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-968, -790)
 
-[node name="Spawner3" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner3" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-726, -790)
 
-[node name="Spawner4" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner4" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-484, -790)
 
-[node name="Spawner5" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner5" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-242, -790)
 
-[node name="Spawner6" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner6" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(0, -790)
 
-[node name="Spawner7" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner7" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(242, -790)
 
-[node name="Spawner8" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner8" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(484, -790)
 
-[node name="Spawner9" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner9" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(726, -790)
 
-[node name="Spawner10" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner10" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(968, -790)
 
-[node name="Spawner11" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner11" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(1210, -790)
 
-[node name="Spawner12" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner12" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(1210, -632)
 
-[node name="Spawner13" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner13" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(1210, -474)
 
-[node name="Spawner14" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner14" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(1210, -316)
 
-[node name="Spawner15" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner15" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(1210, -158)
 
-[node name="Spawner16" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner16" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(1210, 0)
 
-[node name="Spawner17" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner17" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(1210, 158)
 
-[node name="Spawner18" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner18" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(1210, 316)
 
-[node name="Spawner19" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner19" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(1210, 474)
 
-[node name="Spawner20" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner20" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(1210, 632)
 
-[node name="Spawner21" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner21" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(1210, 790)
 
-[node name="Spawner22" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner22" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(968, 790)
 
-[node name="Spawner23" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner23" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(726, 790)
 
-[node name="Spawner24" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner24" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(484, 790)
 
-[node name="Spawner25" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner25" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(242, 790)
 
-[node name="Spawner26" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner26" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(0, 790)
 
-[node name="Spawner27" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner27" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-242, 790)
 
-[node name="Spawner28" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner28" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-484, 790)
 
-[node name="Spawner29" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner29" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-726, 790)
 
-[node name="Spawner30" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner30" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-968, 790)
 
-[node name="Spawner31" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner31" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-1210, 790)
 
-[node name="Spawner32" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner32" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-1210, 632)
 
-[node name="Spawner33" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner33" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-1210, 474)
 
-[node name="Spawner34" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner34" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-1210, 316)
 
-[node name="Spawner35" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner35" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-1210, 158)
 
-[node name="Spawner36" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner36" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-1210, 0)
 
-[node name="Spawner37" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner37" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-1210, -158)
 
-[node name="Spawner38" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner38" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-1210, -316)
 
-[node name="Spawner39" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner39" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-1210, -474)
 
-[node name="Spawner40" type="Marker2D" parent="SquareSpawners"]
+[node name="Spawner40" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-1210, -632)
-
-[connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]
-[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
