@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://l5h4cfx1qa4s"]
+
+[ext_resource type="PackedScene" uid="uid://flrwjj2yd2iq" path="res://Scenes/Objects/object.tscn" id="1_1kjhb"]
+[ext_resource type="Script" path="res://Scenes/Objects/exp_crystal.gd" id="2_n8jwm"]
+[ext_resource type="Texture2D" uid="uid://b7gk7rieqo47f" path="res://Graphics/Objects/EXPCrystal.png" id="2_ubjmj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ct3rq"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8qpiw"]
+radius = 97.0052
+
+[node name="EXP Crystal" instance=ExtResource("1_1kjhb")]
+collision_layer = 4
+script = ExtResource("2_n8jwm")
+
+[node name="PickupRange" parent="." index="0"]
+shape = SubResource("CapsuleShape2D_ct3rq")
+
+[node name="ExpCrystal" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_ubjmj")
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+
+[node name="MagnetRange" type="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_8qpiw")
+
+[connection signal="body_entered" from="." to="." method="_on_EXP_pickup"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_magnet_range_entered"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://flrwjj2yd2iq"]
+
+[ext_resource type="Script" path="res://Scenes/Objects/object.gd" id="1_w6pe5"]
+
+[node name="Object" type="Area2D"]
+script = ExtResource("1_w6pe5")
+
+[node name="PickupRange" type="CollisionShape2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_object_pickup"]

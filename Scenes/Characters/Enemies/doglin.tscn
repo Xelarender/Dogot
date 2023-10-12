@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://c60pqrgnwhvus"]
+
+[ext_resource type="PackedScene" uid="uid://d08lkb3xgu6gp" path="res://Scenes/Characters/Enemies/enemy.tscn" id="1_mrb3m"]
+[ext_resource type="Script" path="res://Scenes/Characters/Enemies/doglin.gd" id="2_pgcch"]
+[ext_resource type="Texture2D" uid="uid://8g77dorwh4iw" path="res://Graphics/Enemies/Goblin.png" id="2_pgpft"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vh74u"]
+radius = 15.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gttc8"]
+radius = 36.3361
+
+[node name="Doglin" instance=ExtResource("1_mrb3m")]
+scale = Vector2(0.8, 0.8)
+collision_layer = 2
+collision_mask = 11
+script = ExtResource("2_pgcch")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_vh74u")
+
+[node name="Goblin" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_pgpft")
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_gttc8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
