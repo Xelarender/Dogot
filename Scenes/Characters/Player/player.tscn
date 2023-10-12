@@ -2,33 +2,33 @@
 
 [ext_resource type="PackedScene" uid="uid://tqiv0drjhfp7" path="res://Scenes/Characters/character.tscn" id="1_eysy4"]
 [ext_resource type="Script" path="res://Scenes/Characters/Player/player.gd" id="1_wukvg"]
-[ext_resource type="Texture2D" uid="uid://b5iqbftypu6y8" path="res://Graphics/Pets/Pinky.png" id="3_hxbr1"]
+[ext_resource type="Texture2D" uid="uid://b5iqbftypu6y8" path="res://Graphics/Pets/Pinky/Pinky.png" id="3_t30l7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e6as7"]
 radius = 5.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r8if5"]
-atlas = ExtResource("3_hxbr1")
+atlas = ExtResource("3_t30l7")
 region = Rect2(0, 0, 36, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o872v"]
-atlas = ExtResource("3_hxbr1")
+atlas = ExtResource("3_t30l7")
 region = Rect2(36, 0, 36, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ohwf"]
-atlas = ExtResource("3_hxbr1")
+atlas = ExtResource("3_t30l7")
 region = Rect2(72, 0, 36, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fnq3l"]
-atlas = ExtResource("3_hxbr1")
+atlas = ExtResource("3_t30l7")
 region = Rect2(108, 0, 36, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1hsv0"]
-atlas = ExtResource("3_hxbr1")
+atlas = ExtResource("3_t30l7")
 region = Rect2(144, 0, 36, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eu10d"]
-atlas = ExtResource("3_hxbr1")
+atlas = ExtResource("3_t30l7")
 region = Rect2(180, 0, 36, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3weg1"]
