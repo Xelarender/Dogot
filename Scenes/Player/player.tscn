@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://dgt47bra3qrdb"]
+[gd_scene load_steps=15 format=3 uid="uid://dgt47bra3qrdb"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_1egd0"]
 [ext_resource type="Texture2D" uid="uid://ccsfs0k718dx3" path="res://Graphics/Pets/Pinky/Pinky.png" id="2_e404m"]
+[ext_resource type="AudioStream" uid="uid://b73cosgkrigyr" path="res://Audio/cat_scratch_1.mp3" id="3_r74m0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bvxun"]
 atlas = ExtResource("2_e404m")
@@ -59,8 +60,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mka25"]
-radius = 42.0
-height = 228.0
+radius = 28.0
+height = 140.0
 
 [sub_resource type="Animation" id="Animation_8avq7"]
 length = 0.001
@@ -111,7 +112,7 @@ tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [0, 1, 2, 3, 4]
@@ -128,15 +129,14 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("1_1egd0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(20, -110)
-scale = Vector2(10, 10)
+position = Vector2(12, 2)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_t32kg")
 autoplay = "default"
 
 [node name="ScratchTimer" type="Timer" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -110)
 shape = SubResource("CapsuleShape2D_mka25")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -144,5 +144,8 @@ autoplay = "idle"
 libraries = {
 "": SubResource("AnimationLibrary_wv50i")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_r74m0")
 
 [connection signal="timeout" from="ScratchTimer" to="." method="_on_scratch_timer_timeout"]

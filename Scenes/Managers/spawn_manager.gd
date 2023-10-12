@@ -19,10 +19,8 @@ func _process(_delta):
 func _on_spawn_timer_timeout():
 	var spawnpoints = $Spawners.get_children()
 	var selected_spawn = spawnpoints[randi() % spawnpoints.size()]
-#	print(selected_spawn)
 	var enemyspawn = enemy.instantiate() as CharacterBody2D
 	enemyspawn.position = selected_spawn.global_position
-#	print("enemy spawned at " +str(enemyspawn.position))
 	$"../../Enemies".add_child(enemyspawn)
 	pass # Replace with function body.
 
@@ -33,3 +31,4 @@ func _on_wave_timer_timeout():
 	print("New Wave!")
 	print("Now spawning every "+str($SpawnTimer.wait_time)+" seconds!")
 	pass # Replace with function body.
+	

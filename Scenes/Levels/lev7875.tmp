@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cxiuwpqho5gb5"]
+[gd_scene load_steps=7 format=3 uid="uid://cxiuwpqho5gb5"]
 
 [ext_resource type="PackedScene" uid="uid://dgt47bra3qrdb" path="res://Scenes/Player/player.tscn" id="1_gpvh2"]
 [ext_resource type="Script" path="res://Scenes/Levels/level.gd" id="1_yhfjs"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b72kxarvfd8jy" path="res://Scenes/Managers/spawn_manager.tscn" id="4_1gmju"]
 [ext_resource type="PackedScene" uid="uid://bt4sso0x032nc" path="res://Scenes/Enemies/enemy.tscn" id="5_mfe1v"]
 [ext_resource type="Script" path="res://Scenes/Levels/EXP.gd" id="6_ei3q7"]
-[ext_resource type="PackedScene" uid="uid://beekovgreepni" path="res://Scenes/Enemies/enemy_1.tscn" id="7_5vtv8"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_yhfjs")
@@ -35,12 +34,10 @@ position_smoothing_enabled = true
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="EXP" type="Node2D" parent="Enemies"]
-script = ExtResource("6_ei3q7")
-
 [node name="enemy" parent="Enemies" instance=ExtResource("5_mfe1v")]
 
-[node name="Enemy_1" parent="Enemies" instance=ExtResource("7_5vtv8")]
+[node name="EXP" type="Node2D" parent="."]
+script = ExtResource("6_ei3q7")
 
 [connection signal="scratch" from="Player" to="." method="_on_player_scratch"]
 [connection signal="enemy_death" from="Enemies/enemy" to="." method="_on_enemy_enemy_death"]

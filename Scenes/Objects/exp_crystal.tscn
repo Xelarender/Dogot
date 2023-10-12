@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://0x8rckad47ms"]
+
+[ext_resource type="Texture2D" uid="uid://t1gdti0kuu7p" path="res://Graphics/Objects/EXPCrystal.png" id="1_04o17"]
+[ext_resource type="Script" path="res://Scenes/Objects/exp_crystal.gd" id="1_w5yse"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pgula"]
+radius = 6.0
+height = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2neka"]
+radius = 90.0056
+
+[node name="EXP_Crystal" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_w5yse")
+
+[node name="ExpCrystal" type="Sprite2D" parent="."]
+texture = ExtResource("1_04o17")
+
+[node name="PickupHitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_pgula")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="PickupRange" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_2neka")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Pickup_range_body_entered"]
