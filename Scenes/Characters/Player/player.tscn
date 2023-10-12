@@ -7,35 +7,35 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e6as7"]
 radius = 5.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r8if5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2f7s"]
 atlas = ExtResource("3_t30l7")
-region = Rect2(0, 0, 36, 32)
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o872v"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_83qsg"]
 atlas = ExtResource("3_t30l7")
-region = Rect2(36, 0, 36, 32)
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8ohwf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkcnx"]
 atlas = ExtResource("3_t30l7")
-region = Rect2(72, 0, 36, 32)
+region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fnq3l"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrctl"]
 atlas = ExtResource("3_t30l7")
-region = Rect2(108, 0, 36, 32)
+region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1hsv0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2q1c"]
 atlas = ExtResource("3_t30l7")
-region = Rect2(144, 0, 36, 32)
+region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eu10d"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_626x2"]
 atlas = ExtResource("3_t30l7")
-region = Rect2(180, 0, 36, 32)
+region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3weg1"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r8if5")
+"texture": SubResource("AtlasTexture_l2f7s")
 }],
 "loop": true,
 "name": &"default",
@@ -43,21 +43,21 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o872v")
+"texture": SubResource("AtlasTexture_83qsg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8ohwf")
+"texture": SubResource("AtlasTexture_vkcnx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fnq3l")
+"texture": SubResource("AtlasTexture_mrctl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1hsv0")
+"texture": SubResource("AtlasTexture_k2q1c")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eu10d")
+"texture": SubResource("AtlasTexture_626x2")
 }],
-"loop": false,
+"loop": true,
 "name": &"scratch",
 "speed": 5.0
 }]
@@ -112,7 +112,7 @@ tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.02, 0.04, 0.06, 0.08),
+"times": PackedFloat32Array(0, 0.03, 0.06, 0.09, 0.12),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4]
@@ -132,7 +132,6 @@ script = ExtResource("1_wukvg")
 shape = SubResource("CapsuleShape2D_e6as7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
-position = Vector2(2, 0)
 sprite_frames = SubResource("SpriteFrames_3weg1")
 autoplay = "default"
 
