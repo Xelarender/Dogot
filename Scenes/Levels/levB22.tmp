@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cv25mwy0rpkoc"]
+[gd_scene load_steps=4 format=3 uid="uid://cv25mwy0rpkoc"]
 
 [ext_resource type="Texture2D" uid="uid://ccstsq6bm4lvq" path="res://Graphics/Terrain/stones.png" id="1_1q36j"]
 [ext_resource type="PackedScene" uid="uid://b0x37g2xg81lt" path="res://Scenes/Characters/Player/player.tscn" id="1_yoxib"]
 [ext_resource type="PackedScene" uid="uid://b72kxarvfd8jy" path="res://Scenes/Managers/spawn_manager.tscn" id="3_tqkja"]
-[ext_resource type="Script" path="res://Scenes/Levels/Projectiles.gd" id="4_qvokl"]
-[ext_resource type="PackedScene" uid="uid://c60pqrgnwhvus" path="res://Scenes/Characters/Enemies/doglin.tscn" id="5_35p2s"]
 
 [node name="Level" type="Node2D"]
 
@@ -26,7 +24,3 @@ region_rect = Rect2(20000, 20000, 20000, 20000)
 [node name="SpawnManager" parent="Player" instance=ExtResource("3_tqkja")]
 
 [node name="Projectiles" type="Node2D" parent="."]
-script = ExtResource("4_qvokl")
-
-[node name="Doglin" parent="." instance=ExtResource("5_35p2s")]
-position = Vector2(96, -62)

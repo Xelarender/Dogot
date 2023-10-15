@@ -5,3 +5,6 @@
 
 [node name="Enemy" instance=ExtResource("1_ouq2q")]
 script = ExtResource("2_t00um")
+enemy_damage = 1.0
+enemy_health = 1.0
+enemy_value = 1.0

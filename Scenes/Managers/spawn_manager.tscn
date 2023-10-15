@@ -1,11 +1,16 @@
-[gd_scene format=3 uid="uid://b72kxarvfd8jy"]
+[gd_scene load_steps=2 format=3 uid="uid://b72kxarvfd8jy"]
+
+[ext_resource type="Script" path="res://Scenes/Managers/spawn_manager.gd" id="1_3n4l7"]
 
 [node name="SpawnManager" type="Node2D"]
+script = ExtResource("1_3n4l7")
 
 [node name="WaveTimer" type="Timer" parent="."]
 wait_time = 10.0
+autostart = true
 
 [node name="SpawnTimer" type="Timer" parent="."]
+autostart = true
 
 [node name="Spawners - Circle" type="Node2D" parent="."]
 scale = Vector2(2, 2)
@@ -252,3 +257,6 @@ position = Vector2(-1210, -474)
 
 [node name="Spawner40" type="Marker2D" parent="Spawners - Rectangle"]
 position = Vector2(-1210, -632)
+
+[connection signal="timeout" from="WaveTimer" to="." method="_on_wave_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

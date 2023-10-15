@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://b0x37g2xg81lt"]
+[gd_scene load_steps=16 format=3 uid="uid://b0x37g2xg81lt"]
 
 [ext_resource type="PackedScene" uid="uid://tqiv0drjhfp7" path="res://Scenes/Characters/character.tscn" id="1_eysy4"]
 [ext_resource type="Script" path="res://Scenes/Characters/Player/player.gd" id="1_wukvg"]
 [ext_resource type="Texture2D" uid="uid://b5iqbftypu6y8" path="res://Graphics/Pets/Pinky.png" id="3_hxbr1"]
+[ext_resource type="PackedScene" uid="uid://bwmsolahbmdtt" path="res://Scenes/Attacks/scratch.tscn" id="4_1gulr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e6as7"]
 radius = 5.0
@@ -144,4 +145,17 @@ libraries = {
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
 
 [node name="Camera2D" type="Camera2D" parent="." index="4"]
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(2, 2)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="5"]
+offset_left = 280.0
+offset_top = 228.0
+offset_right = 477.0
+offset_bottom = 268.0
+
+[node name="ScratchCooldown" type="Timer" parent="." index="6"]
+wait_time = 0.5
+
+[node name="Scratch" parent="." index="7" instance=ExtResource("4_1gulr")]
+
+[connection signal="timeout" from="ScratchCooldown" to="." method="_on_scratch_cooldown_timeout"]

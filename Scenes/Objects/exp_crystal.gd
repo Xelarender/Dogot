@@ -4,9 +4,9 @@ extends object
 
 @onready var player = get_tree().current_scene.get_node("Player")
 var speed:int = 500
-var value:int
 var in_magnet_range:bool = false
 var direction
+var value
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,15 +20,14 @@ func _process(delta):
 		position += direction * speed * delta
 
 
-func _on_EXP_pickup(body):
-	Signalbus.emit_signal("exp_pickup", value)
+func _on_EXP_pickup(_body):
+	Signalbus.exp_pickup.emit(value)
 	queue_free()
 	pass # Replace with function body.
 
 
 
-
-func _on_magnet_range_entered(body):
+func _on_magnet_range_entered(_body):
 	print("vacuum time")
 	in_magnet_range=true
 	
