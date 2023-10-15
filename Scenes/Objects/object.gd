@@ -9,11 +9,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
-func _on_object_pickup(body):
+func _on_object_pickup(_body):
 	print(str(self)+" was picked up")
 	pass # Replace with function body.
 

@@ -9,7 +9,7 @@ radius = 5.0
 height = 16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8qpiw"]
-radius = 97.0052
+radius = 53.0
 
 [node name="EXP Crystal" instance=ExtResource("1_1kjhb")]
 collision_layer = 4
