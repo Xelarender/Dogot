@@ -3,7 +3,8 @@ extends Area2D
 
 @onready var player = get_tree().current_scene.get_node("Player")
 
-var can_scratch_attack:bool = true
+#var can_scratch_attack:bool = true
+var scratch_damage:int = 1
 
 
 
@@ -19,19 +20,14 @@ func _process(_delta):
 
 
 func _on_body_entered(body):
-	if "_hit" in body:
-		body._hit()
-	pass # Replace with function body.
-
+#	Signalbus.outgoing_damage.emit(scratch_damage)
+	body._hit_scratch(scratch_damage)
 
 func _scratch_attack():
 	$".".visible = true
 	$CollisionPolygon2D.disabled = false
 	$AudioStreamPlayer2D.play()
 	$AnimationPlayer.play("scratch")
-	print("scratching")
 	await $AnimationPlayer.animation_finished
 	$".".visible = false
 	$CollisionPolygon2D.disabled = true
-	
-#	player.can_scratch = false

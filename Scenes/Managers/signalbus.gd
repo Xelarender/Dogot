@@ -2,6 +2,17 @@ extends Node
 
 signal exp_pickup(value) #exp_crystal _on_EXP_pickup emits >> player _on_ready() connects >> player _exp_pickup
 signal difficulty_increase(difficulty) #spawn_manager on_wave_timer_timeout emits >> enemy on_ready() connects >> enemy _on_difficulty_increase
+#signal outgoing_damage(scratch_damage, frisbee_damage, spell_damage)
+
+
+
+
+
+
+
+
+
+
 
 
 

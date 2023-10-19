@@ -4,6 +4,9 @@ extends character
 
 var experience:float = 0
 var can_scratch:bool = true
+var level:int = 1
+var levelconstant:float = 0.1
+var levelpower:float = 1.25
 
 signal scratch(pos, lookdirection)
 
@@ -18,7 +21,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	_movement()
-	$RichTextLabel.text = "Total EXP: " +str(experience)
+	$RichTextLabel.text = "Total EXP: " +str(experience)# +" Level: "+str(level)
 	_scratch_animation()
 	_scratch_attack()
 	pass
@@ -59,3 +62,6 @@ func _scratch_attack():
 func _on_scratch_cooldown_timeout():
 	can_scratch = true
 	pass # Replace with function body.
+	
+
+

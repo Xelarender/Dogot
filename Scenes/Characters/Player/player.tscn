@@ -144,18 +144,15 @@ libraries = {
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
 
-[node name="Camera2D" type="Camera2D" parent="." index="4"]
-zoom = Vector2(2, 2)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="." index="5"]
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="4"]
 offset_left = 280.0
 offset_top = 228.0
 offset_right = 477.0
 offset_bottom = 268.0
 
-[node name="ScratchCooldown" type="Timer" parent="." index="6"]
+[node name="ScratchCooldown" type="Timer" parent="." index="5"]
 wait_time = 0.5
 
-[node name="Scratch" parent="." index="7" instance=ExtResource("4_1gulr")]
+[node name="Scratch" parent="." index="6" instance=ExtResource("4_1gulr")]
 
 [connection signal="timeout" from="ScratchCooldown" to="." method="_on_scratch_cooldown_timeout"]
