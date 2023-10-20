@@ -28,7 +28,6 @@ func _on_EXP_pickup(_body):
 
 
 func _on_magnet_range_entered(_body):
-	print("vacuum time")
 	in_magnet_range=true
 	
 	

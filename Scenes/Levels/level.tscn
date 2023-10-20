@@ -25,6 +25,9 @@ region_rect = Rect2(20000, 20000, 20000, 20000)
 
 [node name="SpawnManager" parent="Player" instance=ExtResource("3_tqkja")]
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
+
 [node name="Projectiles" type="Node2D" parent="."]
 script = ExtResource("4_qvokl")
 

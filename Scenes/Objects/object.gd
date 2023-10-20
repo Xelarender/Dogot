@@ -17,4 +17,3 @@ func _on_object_pickup(_body):
 	print(str(self)+" was picked up")
 	pass # Replace with function body.
 
-
