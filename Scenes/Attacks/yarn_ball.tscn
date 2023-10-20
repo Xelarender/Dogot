@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://baq14ihc0eb6a"]
+
+[ext_resource type="Script" path="res://Scenes/Attacks/yarn_ball.gd" id="1_elcq8"]
+[ext_resource type="Texture2D" uid="uid://dxdbeeu3yskh3" path="res://Graphics/Attacks/Yarn_Ball.png" id="1_iitlq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p4tml"]
+
+[node name="YarnAnchor" type="Node2D"]
+script = ExtResource("1_elcq8")
+
+[node name="YarnBall" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YarnBall"]
+shape = SubResource("CircleShape2D_p4tml")
+
+[node name="YarnBall" type="Sprite2D" parent="YarnBall"]
+texture = ExtResource("1_iitlq")
+
+[node name="Timer" type="Timer" parent="YarnBall"]
+
+[connection signal="body_entered" from="YarnBall" to="." method="_on_yarn_ball_body_entered"]

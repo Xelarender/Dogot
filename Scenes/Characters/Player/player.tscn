@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://b0x37g2xg81lt"]
+[gd_scene load_steps=18 format=3 uid="uid://b0x37g2xg81lt"]
 
 [ext_resource type="PackedScene" uid="uid://tqiv0drjhfp7" path="res://Scenes/Characters/character.tscn" id="1_eysy4"]
 [ext_resource type="Script" path="res://Scenes/Characters/Player/player.gd" id="1_wukvg"]
 [ext_resource type="Texture2D" uid="uid://b5iqbftypu6y8" path="res://Graphics/Pets/Pinky.png" id="3_hxbr1"]
 [ext_resource type="PackedScene" uid="uid://bwmsolahbmdtt" path="res://Scenes/Attacks/scratch.tscn" id="4_1gulr"]
+[ext_resource type="PackedScene" uid="uid://c1o7rnaenrhh7" path="res://Scenes/Attacks/frisbee.tscn" id="5_04ung"]
+[ext_resource type="PackedScene" uid="uid://baq14ihc0eb6a" path="res://Scenes/Attacks/yarn_ball.tscn" id="5_vjmak"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e6as7"]
 radius = 5.0
@@ -153,6 +155,12 @@ offset_bottom = 268.0
 [node name="ScratchCooldown" type="Timer" parent="." index="5"]
 wait_time = 0.5
 
-[node name="Scratch" parent="." index="6" instance=ExtResource("4_1gulr")]
+[node name="Attacks" type="Node2D" parent="." index="6"]
+
+[node name="Scratch" parent="Attacks" index="0" instance=ExtResource("4_1gulr")]
+
+[node name="YarnAnchor" parent="Attacks" index="1" instance=ExtResource("5_vjmak")]
+
+[node name="Frisbee" parent="Attacks" index="2" instance=ExtResource("5_04ung")]
 
 [connection signal="timeout" from="ScratchCooldown" to="." method="_on_scratch_cooldown_timeout"]

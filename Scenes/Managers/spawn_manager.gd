@@ -27,6 +27,7 @@ func _process(_delta):
 		print("level 10 doglin spawning")
 		selected_shape = $"Spawners - Rectangle"
 		monster_change=false
+	_spawn_doglin()
 
 
 func _on_spawn_timer_timeout():
@@ -47,3 +48,9 @@ func _on_wave_timer_timeout():
 	print("Now spawning every "+str($SpawnTimer.wait_time)+" seconds!")
 	print("Level "+str(difficulty)+" monsters now spawning!")
 	Signalbus.difficulty_increase.emit(difficulty)
+	
+	
+func _spawn_doglin():
+	if Input.is_action_pressed("SpawnDoglin"):
+		self._on_spawn_timer_timeout()
+		

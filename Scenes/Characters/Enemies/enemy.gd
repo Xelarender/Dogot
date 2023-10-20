@@ -38,12 +38,18 @@ func _on_enemy_death():
 	crystal.value = self.value
 	objects_node.add_child(crystal)
 	print(str(self.value)+" worth of EXP spawned")
-	queue_free()
-	
-	
+	queue_free()	
 	
 func _on_difficulty_increase(difficulty):
 	enemy_damage = difficulty
 	enemy_health = difficulty * 1.5
 	enemy_value = difficulty
-	pass
+	
+
+func _hit_scratch(scratch_damage):
+	self.health -= scratch_damage
+	print("scratch hit")
+
+func _hit_yarn(yarn_damage):
+	self.health -= yarn_damage
+	print("yarn hit")

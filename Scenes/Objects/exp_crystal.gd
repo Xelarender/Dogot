@@ -29,6 +29,7 @@ func _on_EXP_pickup(_body):
 
 func _on_magnet_range_entered(_body):
 	in_magnet_range=true
+	$Area2D.set_deferred("monitoring", false)
 	
 	
 	pass # Replace with function body.
