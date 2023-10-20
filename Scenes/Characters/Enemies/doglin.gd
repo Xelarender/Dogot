@@ -15,18 +15,19 @@ func _ready():
 #	Signalbus.connect("outgoing_damage", _hit_scratch)
 
 
-
-
 func _process(_delta):
 	$RichTextLabel.text = str(value)+"    "+str(health)+"/"+str(max_health)
 	_movement()
-	print(floor(Enemy.enemy_health))
 	if health <= 0:
 		_on_enemy_death()
 	
+
+#func _hit_scratch(scratch_damage):
+#	super(scratch_damage)
+#	self.health -= scratch_damage
+#	print("scratch hit")
 	
-func _hit_scratch(scratch_damage):
-	self.health -= scratch_damage
-	print("scratch hit")
-	
+#func _hit_yarn(yarn_damage):
+#	self.health -= yarn_damage
+#	print("yarn hit")
 

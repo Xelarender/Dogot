@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1o7rnaenrhh7"]
+
+[ext_resource type="Script" path="res://Scenes/Attacks/frisbee.gd" id="1_3le7g"]
+[ext_resource type="Texture2D" uid="uid://bd7u8w10ysgi6" path="res://Graphics/Attacks/Frisbee.png" id="1_ocruc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rrco1"]
+radius = 11.0
+
+[node name="Frisbee" type="Area2D"]
+script = ExtResource("1_3le7g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rrco1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ocruc")

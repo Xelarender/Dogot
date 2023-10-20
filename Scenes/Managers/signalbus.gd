@@ -7,16 +7,6 @@ signal difficulty_increase(difficulty) #spawn_manager on_wave_timer_timeout emit
 
 
 
-
-
-
-
-
-
-
-
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

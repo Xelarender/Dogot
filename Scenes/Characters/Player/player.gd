@@ -54,14 +54,14 @@ func _scratch_attack():
 	if Input.is_action_pressed("Primary_Action") and can_scratch:
 		$ScratchCooldown.start()
 		var lookdirection = (get_global_mouse_position()-position).normalized()
-		$Scratch.rotation_degrees = rad_to_deg(lookdirection.angle()) + 90
-		$Scratch._scratch_attack()
+		$Attacks/Scratch.rotation_degrees = rad_to_deg(lookdirection.angle()) + 90
+		$Attacks/Scratch._scratch_attack()
 		can_scratch = false
+		print("scratching")
 		
 
 func _on_scratch_cooldown_timeout():
 	can_scratch = true
 	pass # Replace with function body.
 	
-
-
+	
